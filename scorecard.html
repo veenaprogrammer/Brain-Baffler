@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Card</title>
+    <link rel="stylesheet" href="scorecard.css">
+</head>
+<body>
+    <div class="background-container">
+    <video autoplay muted loop class="background-video">
+        <source src="Gif/vecteezy_the-windy-green-plain-animation_2299720.mp4" type="video/mp4">
+        
+    </video>
+    <div class="content-container">
+        <header>
+            <h1>Score Card</h1>
+        </header>
+        <main>
+            <div class="score-container">
+               
+                <p>Highest Scorer: <span id="highestScorer"></span></p>
+                <p>Highest Score: <span id="highestScore"></span></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scoreTableBody">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <button class="back-button" onclick="goBack()">Go Back</button>
+        </main>
+    </div>
+    <script src="scorecard.js"></script>
+    <script>
+        // Call the function to populate scores when the page loads
+        populateScores();
+    </script>
+</body>
+</html>

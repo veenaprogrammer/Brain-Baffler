@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Baffler</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header class="outer container">
+        <div class="video-container">
+            <video src="Gif/vecteezy_gaming-background-video-4k-hd-resolution_20389603.mp4" autoplay loop muted></video>
+        </div>
+    
+        <div class="content-container">
+            <h1><b>Welcome to Brain Baffler</b></h1>
+            <div class="form-container">
+                <div>
+                    <label for="player1">Player 1:</label>
+                    <input type="text" id="player1" placeholder="Enter Player 1 Name">
+                </div>
+                <div>
+                    <label for="player2">Player 2:</label>
+                    <input type="text" id="player2" placeholder="Enter Player 2 Name">
+                </div>
+                
+            </div>
+            <div class="button-container">
+                <button onclick="startGame()">Start Game</button>
+                <button onclick="showInstructionsPopup()">Instructions</button>
+                <button onclick="openScoreCard()">Score card</button>
+            </div>
+            <div class="ratings-container">
+                <button onclick="openRatingPopup()">Rate Us</button>
+            </div>
+            <div id="ratingPopup" class="rating-popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closeRatingPopup()">&times;</span>
+                    <h2>Rate Us</h2>
+                    <div class="form-container">
+                        <div>
+                            <label for="ratingPlayer">Player :</label>
+                            <input type="text" id="ratingPlayer" placeholder="Enter Player Name">
+                        </div>
+                        
+                    </div>
+                    <div class="ratings">
+                        <input type="radio" id="popupStar5" name="popupRating" value="5">
+                        <label for="popupStar5" title="5 stars">★</label>
+                        <input type="radio" id="popupStar4" name="popupRating" value="4">
+                        <label for="popupStar4" title="4 stars">★</label>
+                        <input type="radio" id="popupStar3" name="popupRating" value="3">
+                        <label for="popupStar3" title="3 stars">★</label>
+                        <input type="radio" id="popupStar2" name="popupRating" value="2">
+                        <label for="popupStar2" title="2 stars">★</label>
+                        <input type="radio" id="popupStar1" name="popupRating" value="1">
+                        <label for="popupStar1" title="1 star">★</label>
+                    </div>
+                    <button onclick="submitRating()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="go-back">
+        <a href="index.html">
+            <div class="go-back-icon">
+            <img src="image/depositphotos_173161128-stock-photo-back-arrow-icon-special-blue.jpg" alt="Go Back" style="width:50px;height:50px;">
+        </div>
+        </a>
+        
+    </div>
+    <div class="music-container">
+        <button onclick="toggleMusic()">Play Music</button>
+    </div>
+
+    
+    <audio id="game_sound" src="audio/DRIVE(chosic.com).mp3"  loop></audio>
+    <div id="instructionsPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeInstructionsPopup()">&times;</span>
+            <h2>Instructions</h2>
+            <ul>
+                <li>The first player turns over two cards.</li>
+                <li>If the two cards match, the player earns points and gets another turn to try for another match.</li>
+                <li>If the two cards do not match, they are turned face down again.</li>
+                <li>The next player then takes a turn.</li>
+                <li>Players continue taking turns until all matches are found.</li>
+                <li>The player with the most matches at the end of the game wins.</li>
+                
+            </ul>
+        </div>
+    </div>
+    <script src="home.js"></script>
+</body>
+</html>

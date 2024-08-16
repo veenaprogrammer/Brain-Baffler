@@ -1,0 +1,76 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.bg-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#countdown {
+    font-size: 8em;
+    margin-bottom: 20px;
+    z-index: 1;
+    font-weight: bolder;
+    position: absolute;
+    margin: 40px;
+    
+}
+
+#playButton {
+    font-size: 8em;
+    padding: 10px 20px;
+    background-color:black;
+    z-index: 1;
+    font-weight: bolder;
+    position: absolute;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.center-container {
+    
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.go-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.go-back-icon {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.go-back-icon:hover {
+    background-color: #f0f0f0; 
+ }
